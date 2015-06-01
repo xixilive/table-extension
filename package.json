@@ -1,6 +1,6 @@
 {
   "name": "showdown-table",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Add markdown table favor to showdown",
   "keywords": [
     "markdown",
@@ -12,8 +12,8 @@
   "license": "BSD",
   "repository": {
     "type": "git",
-    "url": "https://github.com/showdownjs/table-extension.git",
-    "web": "https://github.com/showdownjs/table-extension"
+    "url": "https://github.com/xixilive/table-extension.git",
+    "web": "https://github.com/xixilive/table-extension"
   },
   "bugs": {
     "url": "https://github.com/showdownjs/table-extension/issues"
@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "showdown": "0.x.x"
+    "showdown": "~1.0.0"
   },
   "devDependencies": {
     "chai": "^1.10.0",

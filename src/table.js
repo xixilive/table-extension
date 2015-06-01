@@ -100,8 +100,11 @@
   };
 
   // Client-side export
-  if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) {
-    window.Showdown.extensions.table = table;
+  if (typeof window !== 'undefined') {
+    var _sd = (window.showdown || window.Showdown || {});
+    if(typeof _sd.extensions === 'object'){
+      _sd.extensions.table = table;
+    }
   }
   // Server-side export
   if (typeof module !== 'undefined') {

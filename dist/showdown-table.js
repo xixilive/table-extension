@@ -1,4 +1,4 @@
-/*! showdown-table 24-01-2015 */
+/*! showdown-table 02-06-2015 */
 /*
  * Basic table support with re-entrant parsing, where cell content
  * can also specify markdown.
@@ -101,8 +101,11 @@
   };
 
   // Client-side export
-  if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) {
-    window.Showdown.extensions.table = table;
+  if (typeof window !== 'undefined') {
+    var _sd = (window.showdown || window.Showdown || {});
+    if(typeof _sd.extensions === 'object'){
+      _sd.extensions.table = table;
+    }
   }
   // Server-side export
   if (typeof module !== 'undefined') {
